@@ -1,38 +1,64 @@
-import java.sql.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 
 public class TestDrive {
+    Connection connection;
+    Statement stmt;
+
     public static void main(String[] args) throws Exception {
-        Class.forName("org.h2.Driver");
-        Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "");
-        Statement st = connection.createStatement();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
+        TestDrive td = new TestDrive();
+        td.start();
+
+        String command = "";
+        printMenu();
+        while (true) {
+            command = reader.readLine();
+            switch (command) {
+                case "create":
+                    td.createTable();
+                    break;
+                case "exit":
+                    System.exit(0);
+                    break;
+                default:
+                    throw new IllegalAccessException("no such command");
+            }
+        }
+    }
+
+    public static void printMenu() {
+        System.out.println("type a command: ");
+        System.out.println("create - create table");
+        System.out.println("exit - exit program");
+    }
+
+    public void start() {
         try {
-            st.execute("DROP TABLE PERSON");
-        } catch (SQLException sqle) {
-            System.out.println("not found table");
+            Class.forName("org.h2.Driver");
+            connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "");
+            stmt = connection.createStatement();
+        } catch (Exception ex) {
+            System.out.println(ex);
+            ex.printStackTrace();
         }
+    }
 
-        st.execute("CREATE TABLE PERSON (ID INT PRIMARY KEY, FIRSTNAME VARCHAR(64), LASTNAME VARCHAR(64))");
-
-        String sqlInsert = "INSERT INTO PERSON " +
-                "VALUES (1, 'Pasha', 'Lyu')";
-        st.executeUpdate(sqlInsert);
-
-
-        PreparedStatement ps = connection.prepareStatement("select ID, FIRSTNAME, LASTNAME from PERSON");
-        ResultSet rs = ps.executeQuery();
-        if (rs.next()) {
-            System.out.println(rs);
+    public void createTable() throws Exception{
+        String sql = "CREATE TABLE PAY " +
+                "(pay_id INTEGER, " +
+                "amount INTEGER, " +
+                "PRIMARY KEY (pay_id))";
+        try {
+            stmt.execute("DROP TABLE PAY");
+        } catch (Exception ex) {
+            System.out.println("table PAY not found");
         }
-
-        int id = rs.getInt("ID");
-        String firstName = rs.getString("FIRSTNAME");
-        String lastName = rs.getString("LASTNAME");
-        System.out.println(id + firstName + lastName);
-
-        rs.close();
-        ps.close();
-        st.close();
-        connection.close();
+        stmt.execute(sql);
+        System.out.println("table PAY created");
     }
 }
