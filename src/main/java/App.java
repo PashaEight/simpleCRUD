@@ -1,26 +1,29 @@
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class MainAppTestDrive {
+public class App {
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        MainApp td = new MainApp();
-        td.start();
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        ServiceBean service = context.getBean("Service", ServiceBean.class);
+        service.start();
 
         String command;
         while (true) {
-            MainApp.printMenu();
+            ServiceBean.printMenu();
             command = reader.readLine();
             switch (command) {
                 case "create":
-                    td.createTable();
+                    service.createTable();
                     break;
                 case "insert":
-                    td.insertPay();
+                    service.insertPay();
                     break;
                 case "read":
-                    td.getPays();
+                    service.getPays();
                     break;
                 case "exit":
                     System.exit(0);

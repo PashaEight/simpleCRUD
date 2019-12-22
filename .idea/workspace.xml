@@ -2,9 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="798c89a4-19f7-47d6-a782-745112438552" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/TestDrive.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TestDrive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/TestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/simpleCRUD-0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/simpleCRUD-0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/MainApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/MainAppTestDrive.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/MainAppTestDrive.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ServiceBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainAppTestDrive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,6 +101,13 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.MainAppTestDrive">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App" />
+      <module name="simpleCRUD.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Demo" />
       <module name="simpleCRUD.main" />
@@ -94,25 +115,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainApp" />
+    <configuration name="ServiceBean" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ServiceBean" />
       <module name="simpleCRUD.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainAppTestDrive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainAppTestDrive" />
-      <module name="simpleCRUD.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="simpleCRUD [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainAppTestDrive" />
+        <item itemvalue="Gradle.simpleCRUD [build]" />
         <item itemvalue="Application.Demo" />
-        <item itemvalue="Application.MainApp" />
+        <item itemvalue="Application.ServiceBean" />
       </list>
     </recent_temporary>
   </component>
@@ -128,7 +162,7 @@
       <updated>1576877243866</updated>
       <workItem from="1576877245832" duration="4052000" />
       <workItem from="1576980570295" duration="5297000" />
-      <workItem from="1577017302515" duration="2351000" />
+      <workItem from="1577017302515" duration="4442000" />
     </task>
     <servers />
   </component>

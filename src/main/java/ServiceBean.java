@@ -4,18 +4,20 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainApp {
+public class ServiceBean {
     Connection connection;
     Statement stmt;
     List<Payment> paymentList;
     BufferedReader reader;
 
     public static void printMenu() {
+        System.out.println();
         System.out.println("type a command: ");
         System.out.println("create - create table pay");
         System.out.println("insert - insert pay");
         System.out.println("read - get pays");
         System.out.println("exit - exit program");
+        System.out.println();
     }
 
     public void start() {
@@ -52,12 +54,16 @@ public class MainApp {
         int amount = Integer.parseInt(reader.readLine());
         String sql = "INSERT INTO PAY " +
                 "VALUES (?, ?)";
-        PreparedStatement pstmt = connection.prepareStatement(sql);
-        pstmt.setString(1, String.valueOf(pay_id));
-        pstmt.setString(2, String.valueOf(amount));
-        pstmt.executeUpdate();
-        Payment payment = new Payment(pay_id, amount);
-        System.out.println("record inserted");
+        try {
+            PreparedStatement pstmt = connection.prepareStatement(sql);
+            pstmt.setString(1, String.valueOf(pay_id));
+            pstmt.setString(2, String.valueOf(amount));
+            pstmt.executeUpdate();
+            System.out.println("record inserted");
+        }
+        catch (Exception e) {
+            System.out.println("pay wasn't added");
+        }
     }
 
     public void getPays() throws Exception{
