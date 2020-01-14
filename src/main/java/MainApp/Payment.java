@@ -1,3 +1,5 @@
+package MainApp;
+
 public class Payment {
     int pay_id;
     int amount;
@@ -9,7 +11,7 @@ public class Payment {
 
     @Override
     public String toString() {
-        return "Payment{" +
+        return "MainApp.Payment{" +
                 "pay_id=" + pay_id +
                 ", amount=" + amount +
                 '}';

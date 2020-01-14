@@ -2,23 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="798c89a4-19f7-47d6-a782-745112438552" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/MainApp/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/TestDrive.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/simpleCRUD-0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/simpleCRUD-0.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/MainApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/MainAppTestDrive.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/MainAppTestDrive.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ServiceBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainAppTestDrive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Demo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Payment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/ServiceBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Demo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ServiceBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +24,9 @@
   </component>
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -75,6 +74,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
   <component name="ProjectId" id="1VGR3EjPB6IZn7BSYy5Obw8KaNt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -83,10 +85,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/build.gradle" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+    <property name="show.inlinked.gradle.project.popup" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -100,9 +104,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MainAppTestDrive">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="App" />
+      <option name="MAIN_CLASS_NAME" value="MainApp.App" />
       <module name="simpleCRUD.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -111,12 +115,13 @@
     <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Demo" />
       <module name="simpleCRUD.main" />
+      <option name="PROGRAM_PARAMETERS" value="-t 5" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceBean" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ServiceBean" />
+    <configuration name="Repository" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainApp.Repository" />
       <module name="simpleCRUD.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -141,12 +146,17 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Application.Repository" />
+      <item itemvalue="Application.App" />
+      <item itemvalue="Application.Demo" />
+      <item itemvalue="Gradle.simpleCRUD [build]" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainAppTestDrive" />
-        <item itemvalue="Gradle.simpleCRUD [build]" />
+        <item itemvalue="Application.App" />
         <item itemvalue="Application.Demo" />
-        <item itemvalue="Application.ServiceBean" />
+        <item itemvalue="Gradle.simpleCRUD [build]" />
       </list>
     </recent_temporary>
   </component>

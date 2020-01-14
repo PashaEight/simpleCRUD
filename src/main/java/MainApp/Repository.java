@@ -1,42 +1,33 @@
+package MainApp;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.Statement;
 
-public class ServiceBean {
+public class Repository {
     Connection connection;
     Statement stmt;
-    List<Payment> paymentList;
     BufferedReader reader;
 
-    public static void printMenu() {
-        System.out.println();
-        System.out.println("type a command: ");
-        System.out.println("create - create table pay");
-        System.out.println("insert - insert pay");
-        System.out.println("read - get pays");
-        System.out.println("exit - exit program");
-        System.out.println();
-    }
-
-    public void start() {
+    public void init() throws IllegalArgumentException {
         try {
             Class.forName("org.h2.Driver");
             connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "");
             stmt = connection.createStatement();
         } catch (Exception ex) {
-            System.out.println(ex);
             ex.printStackTrace();
+            throw new IllegalArgumentException("couldn't connect to DB");
         }
         reader = new BufferedReader(new InputStreamReader(System.in));
-        paymentList = new ArrayList<>();
     }
 
-    public void createTable() throws Exception{
+    public void createTable() throws Exception {
         String sql = "CREATE TABLE PAY " +
                 "(pay_id INTEGER, " +
-                "amount INTEGER, " +
+                "amount DOUBLE, " +
                 "PRIMARY KEY (pay_id))";
         try {
             stmt.execute("DROP TABLE PAY");
@@ -47,11 +38,11 @@ public class ServiceBean {
         System.out.println("table PAY created");
     }
 
-    public void insertPay() throws Exception{
+    public void insertPay() throws Exception {
         System.out.println("pay_id: ");
         int pay_id = Integer.parseInt(reader.readLine());
         System.out.println("amount: ");
-        int amount = Integer.parseInt(reader.readLine());
+        double amount = Double.parseDouble(reader.readLine());
         String sql = "INSERT INTO PAY " +
                 "VALUES (?, ?)";
         try {
@@ -60,26 +51,25 @@ public class ServiceBean {
             pstmt.setString(2, String.valueOf(amount));
             pstmt.executeUpdate();
             System.out.println("record inserted");
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             System.out.println("pay wasn't added");
+            throw new IllegalArgumentException(e);
         }
     }
 
-    public void getPays() throws Exception{
-        paymentList.clear();
-        String sql = "SELECT pay_id, amount from PAY";
-        ResultSet res = stmt.executeQuery(sql);
-
-        while (res.next()) {
-            int pay_id = res.getInt("pay_id");
-            int amount = res.getInt("amount");
-            paymentList.add(new Payment(pay_id, amount));
-        }
-
-        for (Payment p : paymentList) {
-            System.out.println(p);
-        }
-    }
-
+//    public void getPayList() throws Exception {
+//        paymentList.clear();
+//        String sql = "SELECT pay_id, amount from PAY";
+//        ResultSet res = stmt.executeQuery(sql);
+//
+//        while (res.next()) {
+//            int pay_id = res.getInt("pay_id");
+//            int amount = res.getInt("amount");
+//            paymentList.add(new MainApp.Payment(pay_id, amount));
+//        }
+//
+//        for (MainApp.Payment p : paymentList) {
+//            System.out.println(p);
+//        }
+//    }
 }
