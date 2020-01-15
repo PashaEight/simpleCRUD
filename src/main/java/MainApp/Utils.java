@@ -1,5 +1,12 @@
 package MainApp;
 
+import org.apache.commons.cli.CommandLine;
+import org.apache.commons.cli.CommandLineParser;
+import org.apache.commons.cli.DefaultParser;
+import org.apache.commons.cli.Options;
+
+import java.util.*;
+
 public class Utils {
 
     public static void printMenu() {
@@ -12,8 +19,20 @@ public class Utils {
         System.out.println();
     }
 
-    public static String[] getParams(String s) {
-        return null;
+    public static List<String> getParams(String s) throws Exception {
+        String[] arr = s.split(" ");
+
+        Options options = new Options();
+        options.addOption("id", true, "pay id");
+        options.addOption("amount", true, "pay amount");
+        CommandLineParser parser = new DefaultParser();
+        CommandLine cmd = parser.parse(options, arr);
+
+        String id = cmd.getOptionValue("id");
+        String amount = cmd.getOptionValue("amount");
+
+        List<String> params = Arrays.asList(id, amount);
+        return params;
     }
 
     public static String getCommand(String s) {

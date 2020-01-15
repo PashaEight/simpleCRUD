@@ -1,16 +1,10 @@
 package MainApp;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.Statement;
+import java.sql.*;
 
 public class Repository {
     Connection connection;
     Statement stmt;
-    BufferedReader reader;
 
     public void init() throws IllegalArgumentException {
         try {
@@ -21,7 +15,6 @@ public class Repository {
             ex.printStackTrace();
             throw new IllegalArgumentException("couldn't connect to DB");
         }
-        reader = new BufferedReader(new InputStreamReader(System.in));
     }
 
     public void createTable() throws Exception {
@@ -38,17 +31,13 @@ public class Repository {
         System.out.println("table PAY created");
     }
 
-    public void insertPay() throws Exception {
-        System.out.println("pay_id: ");
-        int pay_id = Integer.parseInt(reader.readLine());
-        System.out.println("amount: ");
-        double amount = Double.parseDouble(reader.readLine());
+    public void insertPay(Payment payment) throws Exception {
         String sql = "INSERT INTO PAY " +
                 "VALUES (?, ?)";
         try {
             PreparedStatement pstmt = connection.prepareStatement(sql);
-            pstmt.setString(1, String.valueOf(pay_id));
-            pstmt.setString(2, String.valueOf(amount));
+            pstmt.setInt(1, payment.getId());
+            pstmt.setInt(2, payment.getAmount());
             pstmt.executeUpdate();
             System.out.println("record inserted");
         } catch (Exception e) {
@@ -57,19 +46,14 @@ public class Repository {
         }
     }
 
-//    public void getPayList() throws Exception {
-//        paymentList.clear();
-//        String sql = "SELECT pay_id, amount from PAY";
-//        ResultSet res = stmt.executeQuery(sql);
-//
-//        while (res.next()) {
-//            int pay_id = res.getInt("pay_id");
-//            int amount = res.getInt("amount");
-//            paymentList.add(new MainApp.Payment(pay_id, amount));
-//        }
-//
-//        for (MainApp.Payment p : paymentList) {
-//            System.out.println(p);
-//        }
-//    }
+    public void getPayList() throws Exception {
+        String sql = "SELECT pay_id, amount from PAY";
+        ResultSet res = stmt.executeQuery(sql);
+
+        while (res.next()) {
+            int pay_id = res.getInt("pay_id");
+            int amount = res.getInt("amount");
+            System.out.println(pay_id + " / " + amount);
+        }
+    }
 }

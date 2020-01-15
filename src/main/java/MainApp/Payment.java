@@ -1,18 +1,24 @@
 package MainApp;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+
 public class Payment {
-    int pay_id;
+    int id;
     int amount;
 
-    public Payment(int pay_id, int amount) {
-        this.pay_id = pay_id;
-        this.amount = amount;
+    public Payment(String pay_id, String amount) {
+        this.id = Integer.parseInt(pay_id);
+        this.amount = Integer.parseInt(amount);
     }
 
     @Override
     public String toString() {
         return "MainApp.Payment{" +
-                "pay_id=" + pay_id +
+                "pay_id=" + id +
                 ", amount=" + amount +
                 '}';
     }

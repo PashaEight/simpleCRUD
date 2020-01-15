@@ -9,6 +9,7 @@ import java.util.List;
 public class Service {
     Repository repository;
     List<Payment> paymentList;
+    Payment payment;
     BufferedReader reader;
 
     public void init() {
@@ -18,24 +19,36 @@ public class Service {
         reader = new BufferedReader(new InputStreamReader(System.in));
     }
 
-    public void execCommand() throws Exception{
+    public void execCommand() throws Exception {
         String commandWithParams = reader.readLine();
-        String[] params = Utils.getParams(commandWithParams);
+
+        List<String> args = Utils.getParams(commandWithParams);
+        String id = args.get(0);
+        String amount = args.get(1);
         String command = Utils.getCommand(commandWithParams);
+
         switch (command) {
             case "insert":
-                insert();
+                payment = new Payment(id, amount);
+                insert(payment);
+                break;
+            case "read":
+                read();
                 break;
             default:
                 throw new RuntimeException();
         }
     }
 
-    public void insert() throws Exception{
-        repository.insertPay();
+    public void insert(Payment payment) throws Exception {
+        repository.insertPay(payment);
     }
 
-    public void start() throws Exception{
+    public void read() throws Exception{
+        repository.getPayList();
+    }
+
+    public void start() throws Exception {
         while (true) {
             Utils.printMenu();
             execCommand();
