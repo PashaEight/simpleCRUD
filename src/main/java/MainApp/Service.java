@@ -1,20 +1,21 @@
 package MainApp;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.List;
 
+@Component
 public class Service {
+    @Autowired
     Repository repository;
     List<Payment> paymentList;
     Payment payment;
     BufferedReader reader;
 
     public void init() {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-        repository = context.getBean("RepositoryBean", Repository.class);
         repository.init();
         reader = new BufferedReader(new InputStreamReader(System.in));
     }

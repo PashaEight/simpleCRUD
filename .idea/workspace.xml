@@ -3,15 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="798c89a4-19f7-47d6-a782-745112438552" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/MainApp/Payment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/MainApp/Payment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/MainApp/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/MainApp/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/MainApp/Repository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/MainApp/Repository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/MainApp/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/MainApp/Service.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/MainApp/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/MainApp/Utils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainApp/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainApp/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp/Payment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainApp/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp/Repository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainApp/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainApp/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +86,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.inlinked.gradle.project.popup" value="true" />
   </component>
   <component name="RunDashboard">
@@ -170,6 +170,7 @@
       <workItem from="1576877245832" duration="4052000" />
       <workItem from="1576980570295" duration="5297000" />
       <workItem from="1577017302515" duration="4442000" />
+      <workItem from="1582092646502" duration="791000" />
     </task>
     <servers />
   </component>
@@ -194,8 +195,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/MainApp/Repository.java</url>
-          <line>53</line>
+          <line>56</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/MainApp/Service.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
