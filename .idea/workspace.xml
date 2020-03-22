@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="798c89a4-19f7-47d6-a782-745112438552" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/MainApp/Repository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/MainApp/Repository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/MainApp/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/MainApp/Service.class" afterDir="false" />
-    </list>
+    <list default="true" id="798c89a4-19f7-47d6-a782-745112438552" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +87,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
     <property name="show.inlinked.gradle.project.popup" value="true" />
   </component>
   <component name="RecentsManager">
@@ -114,7 +110,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UtilsTest">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainApp.App" />
       <module name="simpleCRUD.main" />
@@ -189,9 +185,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.UtilsTest" />
         <item itemvalue="JUnit.UtilsTest.commandWithParam" />
-        <item itemvalue="Application.App" />
         <item itemvalue="Application.Demo" />
         <item itemvalue="Gradle.simpleCRUD [build]" />
       </list>
@@ -215,7 +211,7 @@
       <workItem from="1584826235794" duration="807000" />
       <workItem from="1584869104514" duration="4088000" />
       <workItem from="1584878315763" duration="310000" />
-      <workItem from="1584878694556" duration="1757000" />
+      <workItem from="1584878694556" duration="4036000" />
     </task>
     <task id="LOCAL-00001" summary="quick fixes">
       <created>1584878497356</created>
@@ -250,11 +246,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/MainApp/Service.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/MainApp/Repository.java</url>
           <line>57</line>
