@@ -13,12 +13,4 @@ public class Payment {
         this.id = Integer.parseInt(pay_id);
         this.amount = Integer.parseInt(amount);
     }
-
-    @Override
-    public String toString() {
-        return "MainApp.Payment{" +
-                "pay_id=" + id +
-                ", amount=" + amount +
-                '}';
-    }
 }

@@ -3,50 +3,58 @@ package MainApp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.List;
 
 @Component
 public class Service {
     @Autowired
     Repository repository;
-    List<Payment> paymentList;
-    Payment payment;
     BufferedReader reader;
 
+    @PostConstruct
     public void init() {
-        repository.init();
         reader = new BufferedReader(new InputStreamReader(System.in));
     }
 
     public void execCommand() throws Exception {
         String commandWithParams = reader.readLine();
-
-        List<String> args = Utils.getParams(commandWithParams);
-        String id = args.get(0);
-        String amount = args.get(1);
         String command = Utils.getCommand(commandWithParams);
 
         switch (command) {
+            case "create":
+                create();
+                break;
             case "insert":
-                payment = new Payment(id, amount);
-                insert(payment);
+                insert(commandWithParams);
                 break;
             case "read":
                 read();
                 break;
+            case "exit":
+                System.exit(0);
             default:
-                throw new RuntimeException();
+                System.out.println("unknown command");
+                break;
         }
     }
 
-    public void insert(Payment payment) throws Exception {
-        repository.insertPay(payment);
+    public void insert(String s) throws Exception {
+        try {
+            Payment payment = Utils.createPay(s);
+            repository.insertPay(payment);
+        } catch (RuntimeException e) {
+            System.out.println("record was not added: " + e.getMessage());
+        }
     }
 
-    public void read() throws Exception{
-        repository.getPayList();
+    public void read() throws Exception {
+        repository.printPayList();
+    }
+
+    public void create() throws Exception {
+        repository.createTable();
     }
 
     public void start() throws Exception {

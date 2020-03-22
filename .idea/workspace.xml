@@ -4,13 +4,16 @@
     <list default="true" id="798c89a4-19f7-47d6-a782-745112438552" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/MainApp/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/MainApp/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/MainApp/Payment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/MainApp/Payment.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/MainApp/Repository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/MainApp/Repository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/MainApp/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/MainApp/Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/MainApp/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/MainApp/Utils.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/applicationContext.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainApp/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainApp/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp/Payment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainApp/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp/Repository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainApp/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainApp/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,11 +68,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="WARN_ABOUT_CRLF" value="false" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
@@ -79,15 +85,29 @@
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/build.gradle" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="C:/Backup/cmder/vendor/git-for-windows/bin/git.exe" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="show.inlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="MainApp" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -170,7 +190,10 @@
       <workItem from="1576877245832" duration="4052000" />
       <workItem from="1576980570295" duration="5297000" />
       <workItem from="1577017302515" duration="4442000" />
-      <workItem from="1582092646502" duration="791000" />
+      <workItem from="1582092646502" duration="1777000" />
+      <workItem from="1582137470795" duration="15000" />
+      <workItem from="1584826235794" duration="807000" />
+      <workItem from="1584869104514" duration="4088000" />
     </task>
     <servers />
   </component>
@@ -194,14 +217,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/MainApp/Repository.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/src/main/java/MainApp/Service.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/MainApp/Service.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/src/main/java/MainApp/Repository.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

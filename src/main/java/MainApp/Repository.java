@@ -2,6 +2,7 @@ package MainApp;
 
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.sql.*;
 
 @Component
@@ -9,6 +10,7 @@ public class Repository {
     Connection connection;
     Statement stmt;
 
+    @PostConstruct
     public void init() throws IllegalArgumentException {
         try {
             Class.forName("org.h2.Driver");
@@ -44,19 +46,23 @@ public class Repository {
             pstmt.executeUpdate();
             System.out.println("record inserted");
         } catch (Exception e) {
-            System.out.println("pay wasn't added");
-            throw new IllegalArgumentException(e);
+            System.out.print("record was not added: " + e.getMessage());
         }
     }
 
-    public void getPayList() throws Exception {
+    public void printPayList() throws Exception {
         String sql = "SELECT pay_id, amount from PAY";
         ResultSet res = stmt.executeQuery(sql);
 
-        while (res.next()) {
-            int pay_id = res.getInt("pay_id");
-            int amount = res.getInt("amount");
-            System.out.println(pay_id + " / " + amount);
+        if (res.next()) {
+            while (res.next()) {
+                int pay_id = res.getInt("pay_id");
+                int amount = res.getInt("amount");
+                System.out.println("pay_id: " + pay_id + ", " + "amount: " + amount);
+            }
+        }
+        else {
+            System.out.println("table is empty");
         }
     }
 }
