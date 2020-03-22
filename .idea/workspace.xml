@@ -3,18 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="798c89a4-19f7-47d6-a782-745112438552" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/MainApp/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/MainApp/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/MainApp/Payment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/MainApp/Payment.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/MainApp/Repository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/MainApp/Repository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/MainApp/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/MainApp/Service.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/MainApp/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/MainApp/Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainApp/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainApp/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainApp/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainApp/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainApp/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,6 +59,7 @@
       <list>
         <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -92,13 +83,15 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="C:/Backup/cmder/vendor/git-for-windows/bin/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../junit5-samples/junit5-jupiter-starter-gradle/build.gradle" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="show.inlinked.gradle.project.popup" value="true" />
   </component>
   <component name="RecentsManager">
@@ -121,7 +114,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="JUnit.UtilsTest">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainApp.App" />
       <module name="simpleCRUD.main" />
@@ -133,13 +126,6 @@
       <option name="MAIN_CLASS_NAME" value="Demo" />
       <module name="simpleCRUD.main" />
       <option name="PROGRAM_PARAMETERS" value="-t 5" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Repository" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainApp.Repository" />
-      <module name="simpleCRUD.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -163,14 +149,48 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="UtilsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simpleCRUD.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MainApp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="MainApp" />
+      <option name="MAIN_CLASS_NAME" value="MainApp.UtilsTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UtilsTest.commandWithParam" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simpleCRUD.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MainApp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="MainApp" />
+      <option name="MAIN_CLASS_NAME" value="MainApp.UtilsTest" />
+      <option name="METHOD_NAME" value="commandWithParam" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.Repository" />
       <item itemvalue="Application.App" />
       <item itemvalue="Application.Demo" />
       <item itemvalue="Gradle.simpleCRUD [build]" />
+      <item itemvalue="JUnit.UtilsTest.commandWithParam" />
+      <item itemvalue="JUnit.UtilsTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UtilsTest" />
+        <item itemvalue="JUnit.UtilsTest.commandWithParam" />
         <item itemvalue="Application.App" />
         <item itemvalue="Application.Demo" />
         <item itemvalue="Gradle.simpleCRUD [build]" />
@@ -194,7 +214,17 @@
       <workItem from="1582137470795" duration="15000" />
       <workItem from="1584826235794" duration="807000" />
       <workItem from="1584869104514" duration="4088000" />
+      <workItem from="1584878315763" duration="310000" />
+      <workItem from="1584878694556" duration="1757000" />
     </task>
+    <task id="LOCAL-00001" summary="quick fixes">
+      <created>1584878497356</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584878497356</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +242,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="quick fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="quick fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
