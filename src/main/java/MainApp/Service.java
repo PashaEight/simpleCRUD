@@ -7,7 +7,6 @@ import javax.annotation.PostConstruct;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-@Component
 public class Service {
     @Autowired
     Repository repository;

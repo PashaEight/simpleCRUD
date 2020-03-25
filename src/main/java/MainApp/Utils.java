@@ -8,6 +8,7 @@ import org.apache.commons.cli.Options;
 public class Utils {
 
     public static void printMenu() {
+        System.out.println();
         System.out.println("type a command: ");
         System.out.println("create - create table pay");
         System.out.println("insert - insert pay (-id <value> -amount <value>)");
@@ -30,7 +31,7 @@ public class Utils {
             Payment payment = new Payment(id, amount);
             return payment;
         } catch (Exception e) {
-            throw new RuntimeException(e.getMessage());
+            throw new RuntimeException("wrong arguments");
         }
     }
 
