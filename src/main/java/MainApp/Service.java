@@ -33,6 +33,9 @@ public class Service {
                 break;
             case "exit":
                 System.exit(0);
+            case "func":
+                System.out.println(repository.getAmountById(14));
+                break;
             default:
                 System.out.println("unknown command");
                 break;

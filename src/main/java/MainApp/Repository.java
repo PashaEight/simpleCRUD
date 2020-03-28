@@ -1,6 +1,8 @@
 package MainApp;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -16,13 +18,15 @@ public class Repository {
     String login;
     @Value("${databasePass}")
     String password;
+    @Autowired
+    JdbcTemplate jdbcTemplate;
 
     @PostConstruct
     public void init() throws IllegalArgumentException {
         try {
-            Class.forName("org.h2.Driver");
-            connection = DriverManager.getConnection(url, login, password);
-            stmt = connection.createStatement();
+//            Class.forName("org.h2.Driver");
+//            connection = DriverManager.getConnection(url, login, password);
+//            stmt = connection.createStatement();
         } catch (Exception ex) {
             ex.printStackTrace();
             throw new IllegalArgumentException("couldn't connect to DB");
@@ -56,6 +60,11 @@ public class Repository {
         }
     }
 
+    public int getAmountById(int payId) {
+        Integer amount = jdbcTemplate.queryForObject("SELECT amount from PAY WHERE PAY_ID=?", Integer.class, payId);
+        return amount;
+    }
+
     public void printPayList() {
         String sql = "SELECT pay_id, amount from PAY";
         try {
@@ -71,8 +80,7 @@ public class Repository {
             } else {
                 System.out.println("table is empty");
             }
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             System.out.println("need to create table first");
         }
     }
