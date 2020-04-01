@@ -1,7 +1,6 @@
 package MainApp;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import java.io.BufferedReader;
@@ -9,7 +8,7 @@ import java.io.InputStreamReader;
 
 public class Service {
     @Autowired
-    Repository repository;
+    PayRepository payRepository;
     BufferedReader reader;
 
     @PostConstruct
@@ -22,20 +21,17 @@ public class Service {
         String command = Utils.getCommand(commandWithParams);
 
         switch (command) {
-            case "create":
-                create();
-                break;
             case "insert":
                 insert(commandWithParams);
                 break;
-            case "read":
-                read();
+            case "print":
+                printAllPayments();
+                break;
+            case "getPay":
+                printPaymentById(14);
                 break;
             case "exit":
                 System.exit(0);
-            case "func":
-                System.out.println(repository.getAmountById(14));
-                break;
             default:
                 System.out.println("unknown command");
                 break;
@@ -45,18 +41,18 @@ public class Service {
     public void insert(String s) throws Exception {
         try {
             Payment payment = Utils.createPay(s);
-            repository.insertPay(payment);
+            payRepository.insertPay(payment);
         } catch (RuntimeException e) {
             System.out.println("record was not added: " + e.getMessage());
         }
     }
 
-    public void read() throws Exception {
-        repository.printPayList();
+    public void printAllPayments() {
+        payRepository.printPayList();
     }
 
-    public void create() throws Exception {
-        repository.createTable();
+    public void printPaymentById(int payId) {
+        System.out.println(payRepository.getPaymentById(payId).toString());
     }
 
     public void start() throws Exception {

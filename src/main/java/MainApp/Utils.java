@@ -10,9 +10,8 @@ public class Utils {
     public static void printMenu() {
         System.out.println();
         System.out.println("type a command: ");
-        System.out.println("create - create table pay");
         System.out.println("insert - insert pay (-id <value> -amount <value>)");
-        System.out.println("read - get pays");
+        System.out.println("print - get pays");
         System.out.println("exit - exit program");
         System.out.println();
     }
