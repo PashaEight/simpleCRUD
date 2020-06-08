@@ -1,4 +1,4 @@
-package MainApp;
+package ru.eight.A.config.MainApp;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;

@@ -1,4 +1,4 @@
-package MainApp;
+package ru.eight.A.config.MainApp;
 
 import lombok.Getter;
 import lombok.Setter;

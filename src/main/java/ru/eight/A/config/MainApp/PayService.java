@@ -1,13 +1,21 @@
-package MainApp;
+package ru.eight.A.config.MainApp;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.List;
 
-public class Service {
+@Service
+public class PayService {
+
     @Autowired
+    public PayService(PayRepository payRepository) {
+        this.payRepository = payRepository;
+    }
+
     PayRepository payRepository;
     BufferedReader reader;
 
@@ -25,7 +33,7 @@ public class Service {
                 insert(commandWithParams);
                 break;
             case "print":
-                printAllPayments();
+                getAllPayments();
                 break;
             case "getPay":
                 printPaymentById(14);
@@ -47,12 +55,17 @@ public class Service {
         }
     }
 
-    public void printAllPayments() {
-        payRepository.printPayList();
+    public List<Payment> getAllPayments() {
+        return payRepository.getPayList();
     }
 
     public void printPaymentById(int payId) {
         System.out.println(payRepository.getPaymentById(payId).toString());
+    }
+
+    public int getPaymentAmountById(int id) {
+        Payment payment = payRepository.getPaymentById(id);
+        return payment.getAmount();
     }
 
     public void start() throws Exception {

@@ -1,13 +1,13 @@
-package MainApp;
+package ru.eight.A.config.MainApp;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import javax.annotation.PostConstruct;
 import java.util.List;
 
-@Component
+@Repository
 public class PayRepository {
     @Autowired
     JdbcTemplate jdbcTemplate;
@@ -18,11 +18,23 @@ public class PayRepository {
     }
 
     public void createTable() {
-        jdbcTemplate.update("DROP TABLE PAY");
-        jdbcTemplate.update("CREATE TABLE PAY " +
+        try {
+            jdbcTemplate.update("DROP TABLE PAY");
+        } catch (Exception e) {
+        }
+        String sql;
+        sql = "CREATE TABLE PAY " +
                 "(ID INTEGER, " +
                 "AMOUNT DOUBLE, " +
-                "PRIMARY KEY (ID))");
+                "PRIMARY KEY (ID))";
+        jdbcTemplate.update(sql);
+
+        sql = "INSERT INTO PAY VALUES (14, 88)";
+        jdbcTemplate.update(sql);
+
+        sql = "INSERT INTO PAY VALUES (15, 89)";
+        jdbcTemplate.update(sql);
+
         System.out.println("table PAY created");
     }
 
@@ -42,15 +54,13 @@ public class PayRepository {
         return jdbcTemplate.queryForObject(sql, new Object[]{payId}, new PaymentRowMapper());
     }
 
-    public void printPayList() {
+    public List<Payment> getPayList() {
         String sql = "SELECT * FROM PAY";
 
         List<Payment> paymentList = jdbcTemplate.query(
                 sql,
                 new PaymentRowMapper());
 
-        for (Payment payment : paymentList) {
-            System.out.println(payment);
-        }
+        return paymentList;
     }
 }
