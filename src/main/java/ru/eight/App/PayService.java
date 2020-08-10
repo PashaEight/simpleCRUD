@@ -1,4 +1,4 @@
-package ru.eight.A.config.MainApp;
+package ru.eight.App;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

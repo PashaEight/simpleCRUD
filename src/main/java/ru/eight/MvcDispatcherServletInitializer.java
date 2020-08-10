@@ -1,4 +1,4 @@
-package ru.eight.A.config;
+package ru.eight;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 

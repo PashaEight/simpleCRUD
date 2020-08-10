@@ -40,5 +40,6 @@ dependencies {
     // https://mvnrepository.com/artifact/javax.servlet/servlet-api
     providedCompile group: 'javax.servlet', name: 'servlet-api', version: '2.5'
 
-    compileOnly 'org.projectlombok:lombok:1.18.10'
+    compileOnly 'org.projectlombok:lombok:1.18.12'
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
 }

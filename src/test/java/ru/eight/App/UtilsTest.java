@@ -1,4 +1,4 @@
-package ru.eight.A.config.MainApp;
+package ru.eight.App;
 
 import org.junit.Assert;
 import org.junit.Test;

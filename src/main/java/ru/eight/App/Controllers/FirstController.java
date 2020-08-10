@@ -1,11 +1,11 @@
-package ru.eight.A.config.MainApp.Controllers;
+package ru.eight.App.Controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import ru.eight.A.config.MainApp.PayService;
-import ru.eight.A.config.MainApp.Payment;
+import ru.eight.App.PayService;
+import ru.eight.App.Payment;
 
 @Controller
 public class FirstController {
