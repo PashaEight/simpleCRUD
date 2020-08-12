@@ -5,7 +5,8 @@ import org.apache.commons.cli.CommandLineParser;
 import org.apache.commons.cli.DefaultParser;
 import org.apache.commons.cli.Options;
 
-public class Utils {
+public class
+        Utils {
 
     public static void printMenu() {
         System.out.println();

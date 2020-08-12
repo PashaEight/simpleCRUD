@@ -1,77 +1,33 @@
 package ru.eight.App;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.io.IOException;
 import java.util.List;
 
 @Service
 public class PayService {
 
     @Autowired
-    public PayService(PayRepository payRepository) {
-        this.payRepository = payRepository;
-    }
+    public PayRepository payRepository;
 
-    PayRepository payRepository;
-    BufferedReader reader;
+    public ObjectMapper objectMap = new ObjectMapper();
 
-    @PostConstruct
-    public void init() {
-        reader = new BufferedReader(new InputStreamReader(System.in));
-    }
-
-    public void execCommand() throws Exception {
-        String commandWithParams = reader.readLine();
-        String command = Utils.getCommand(commandWithParams);
-
-        switch (command) {
-            case "insert":
-                insert(commandWithParams);
-                break;
-            case "print":
-                getAllPayments();
-                break;
-            case "getPay":
-                printPaymentById(14);
-                break;
-            case "exit":
-                System.exit(0);
-            default:
-                System.out.println("unknown command");
-                break;
-        }
-    }
-
-    public void insert(String s) throws Exception {
-        try {
-            Payment payment = Utils.createPay(s);
-            payRepository.insertPay(payment);
-        } catch (RuntimeException e) {
-            System.out.println("record was not added: " + e.getMessage());
-        }
+    public Payment createPay(String payAsString) throws IOException{
+        Payment payment = objectMap.readValue(payAsString, Payment.class);
+        payRepository.insertPay(payment);
+        return payment;
     }
 
     public List<Payment> getAllPayments() {
         return payRepository.getPayList();
     }
 
-    public void printPaymentById(int payId) {
-        System.out.println(payRepository.getPaymentById(payId).toString());
+    public Payment getPay(String idAsString) {
+        int id = Integer.parseInt(idAsString);
+        return payRepository.getPaymentById(id);
     }
 
-    public int getPaymentAmountById(int id) {
-        Payment payment = payRepository.getPaymentById(id);
-        return payment.getAmount();
-    }
-
-    public void start() throws Exception {
-        while (true) {
-            Utils.printMenu();
-            execCommand();
-        }
-    }
 }
