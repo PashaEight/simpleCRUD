@@ -6,8 +6,8 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Payment {
-    int id;
-    int amount;
+    private int id;
+    private int amount;
 
     public Payment(String pay_id, String amount) {
         this.id = Integer.parseInt(pay_id);

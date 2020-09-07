@@ -12,7 +12,6 @@ public class PayService {
 
     @Autowired
     public PayRepository payRepository;
-
     public ObjectMapper objectMap = new ObjectMapper();
 
     public Payment createPay(String payAsString) throws IOException{

@@ -2,9 +2,12 @@ package ru.eight.App;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.PostConstruct;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
 @Repository
@@ -12,16 +15,23 @@ public class PayRepository {
     @Autowired
     JdbcTemplate jdbcTemplate;
 
+    RowMapper<Payment> rm = new RowMapper<Payment>() {
+        @Override
+        public Payment mapRow(ResultSet rs, int rowNum) throws SQLException {
+            Payment payment = new Payment();
+            payment.setId(rs.getInt("ID"));
+            payment.setAmount(rs.getInt("AMOUNT"));
+            return payment;
+        }
+    };
+
     @PostConstruct
     public void init() throws Exception {
         createTable();
     }
 
     public void createTable() {
-        try {
-            jdbcTemplate.update("DROP TABLE PAY");
-        } catch (Exception e) {
-        }
+        jdbcTemplate.update("DROP TABLE PAY");
         String sql;
         sql = "CREATE TABLE PAY " +
                 "(ID INTEGER, " +
@@ -34,32 +44,30 @@ public class PayRepository {
 
         sql = "INSERT INTO PAY VALUES (15, 89)";
         jdbcTemplate.update(sql);
-
-        System.out.println("table PAY created");
     }
 
     public void insertPay(Payment payment) {
-        try {
-            int id = payment.getId();
-            int amount = payment.getAmount();
-            jdbcTemplate.update("INSERT INTO PAY VALUES (?, ?)", id, amount);
-            System.out.println("record inserted");
-        } catch (Exception e) {
-            System.out.print("record was not added: " + e.getMessage());
-        }
+        int id = payment.getId();
+        int amount = payment.getAmount();
+        jdbcTemplate.update("INSERT INTO PAY VALUES (?, ?)", id, amount);
     }
 
     public Payment getPaymentById(int payId) {
         String sql = "SELECT * from PAY WHERE ID = ?";
-        return jdbcTemplate.queryForObject(sql, new Object[]{payId}, new PaymentRowMapper());
+        return jdbcTemplate.queryForObject(sql, new Object[]{payId}, rm);
     }
 
     public List<Payment> getPayList() {
         String sql = "SELECT * FROM PAY";
-
-        List<Payment> paymentList = jdbcTemplate.query(
-                sql,
-                new PaymentRowMapper());
+        List<Payment> paymentList = jdbcTemplate.query(sql, new RowMapper<Payment>() {
+            @Override
+            public Payment mapRow(ResultSet rs, int rowNum) throws SQLException {
+                Payment payment = new Payment();
+                payment.setId(rs.getInt("ID"));
+                payment.setAmount(rs.getInt("AMOUNT"));
+                return payment;
+            }
+        });
 
         return paymentList;
     }
